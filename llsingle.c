@@ -258,24 +258,3 @@ void PrintInfo (List L){
 /* Contoh : jika ada tiga elemen bernilai 1, 20, 30 akan dicetak: [1,20,30] */
 /* Jika list kosong : menulis [] */
 /* Tidak ada tambahan karakter apa pun di awal, akhir, atau di tengah */
-
-void BubbleSort(List *L){
-	address P,Q;
-	int temp;
-	Q = First(*L);
-	while(Q != Nil)
-	{
-		P = Next(Q);
-		while(P != Nil)
-		{
-			if(Info(Q) > Info(P))
-			{
-				temp = Info(P);
-				Info(P) = Info(Q);
-				Info(Q) = temp;
-			}
-			P = Next(P);
-		}
-		Q = Next(Q);
-	}
-}
