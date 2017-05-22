@@ -1,8 +1,15 @@
-//nama: Ari Bambang Kurniawan
-//NIM: 14115062
-#include "stacklist.h"
+
 #include <stdio.h>
 #include <stdlib.h>
+
+#ifndef _BOOLEAN_h
+#define _BOOLEAN_h
+
+#define boolean unsigned char
+#define true 1
+#define false 0
+
+#endif
 
 /*	----- Prototype Manajemen Memori ----- */
 void Alokasi (address * P, infotype X) {
@@ -62,61 +69,7 @@ void Pop (Stack * S, infotype * X) {
 	}
 }
 
-/*	---- Operasi Lain ----- 
-void PrintStack (Stack S) {
-	/* Kamus Lokal 
-	address P;
-
-	/* Algoritma 
-	P = TOP(S);
-	if (P == Nil) {
-		printf("Stack kosong\n");
-	} else {
-		printf("[%d",Info(P));
-		P = Next(P);
-		while (P != Nil) {
-			printf(", %d",Info(P));
-			P = Next(P);
-		}
-		printf("]\n");
+void main(){
+		
+	
 	}
-}
-
-int NbElmt (Stack S) {
-	/* Kamus Lokal 
-	address P;
-	int N;
-
-	/* Algoritma 
-	P = TOP(S);
-	N = 0;
-	while (P != Nil) {
-		N = N + 1;
-		P = Next(P);
-	}
-	return N;
-}
-
-void PopAll (Stack * S) {
-	/* Kamus Lokal 
-	infotype X;
-
-	/* Algoritma 
-	while (!IsEmpty(*S)) {
-		Pop(S,&X);
-	}
-}
-
-void InversStack (Stack * S) {
-	/* Kamus Lokal 
-	Stack S1;
-	infotype X;
-
-	/* Algoritma 
-	while (!IsEmpty(*S)) {
-		Pop(S,&X);
-		Push(&S1,X);
-	}
-	TOP(*S) = TOP(S1);
-}
-*/
